@@ -13,10 +13,10 @@ struct MapView: View {
     @State private var region = MKCoordinateRegion()
     
     var body: some View {
-     Map(coordinateRegion: $region)
-        .onAppear {
-            setRegion(coordinate: coordinate)
-        }
+        Map(coordinateRegion: $region)
+            .onAppear {
+                setRegion(coordinate: coordinate)
+            }
     }
     
     private func setRegion( coordinate: CLLocationCoordinate2D) {

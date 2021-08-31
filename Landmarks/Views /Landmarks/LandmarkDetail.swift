@@ -34,16 +34,16 @@ struct LandmarkDetail: View {
                         .foregroundColor(.primary)
                     FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
                 }
-            
-            HStack {
-                Text(landmark.park)
-                    .font(.subheadline)
-                Spacer()
-                Text(landmark.state)
-                    .font(.subheadline)
-            }
-            .font(.subheadline)
-            .foregroundColor(.secondary)
+                
+                HStack {
+                    Text(landmark.park)
+                        .font(.subheadline)
+                    Spacer()
+                    Text(landmark.state)
+                        .font(.subheadline)
+                }
+                .font(.subheadline)
+                .foregroundColor(.secondary)
                 
                 
                 Divider()
@@ -51,7 +51,7 @@ struct LandmarkDetail: View {
                 Text("About \(landmark.name)")
                     .font(.title2)
                 Text(landmark.description)
-        }
+            }
             .padding()
             
             Spacer()
@@ -62,7 +62,7 @@ struct LandmarkDetail: View {
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
-   static let modelData = ModelData()
+    static let modelData = ModelData()
     
     
     static var previews: some View {
